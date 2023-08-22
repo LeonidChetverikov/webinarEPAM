@@ -1,0 +1,4 @@
+  
+# Default value for serviceName unless overriden
+serviceName: azure-arc-sample
+namespace: default

@@ -1,0 +1,13 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: azure-arc-sample
+  namespace: default
+spec:
+  releaseName: default
+  chart:
+    git: https://leonidchetverikov:rjjspprxg7u3soeobwghlz6jlp6vy4vik6ap5ogovjw6zqowxdta@dev.azure.com/leonidchetverikov/EPAM_AzureARC/_git/EPAM_AzureARC
+    ref: master
+    path: charts/azure-arc-sample
+  values:
+    serviceName: arc-k8s-demo
