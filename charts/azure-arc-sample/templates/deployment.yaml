@@ -25,6 +25,12 @@ spec:
       - name: {{.Release.Name}}
         image: leonidchetverikov/webinar:003
         imagePullPolicy: IfNotPresent
+        env:
+        - name: ENV_CLOUD
+          valueFrom:
+            configMapKeyRef:
+              name: cloudconfigmap
+              key: ENV_CLOUD
         ports:
         - containerPort: 8080
         resources:
