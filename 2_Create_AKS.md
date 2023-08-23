@@ -7,7 +7,7 @@
  > Create an AKS cluster using the az aks create command with the --enable-addons monitoring parameter to enable Azure Monitor Container insights with managed identity authentication (Minimum Azure CLI version 2.49.0 or higher).
 
 
- ``` az aks create -g rg-webinar-francecentral-001 -n aks-webinar-francecentral-001 --enable-managed-identity --node-count 1 --enable-addons monitoring --generate-ssh-keys ```
+ ``` az aks create -g rg-webinar-francecentral-001 -n aks-webinar-francecentral-001 --enable-managed-identity --node-count 2 --enable-addons monitoring --generate-ssh-keys ```
 
  > After a few minutes, the command completes and returns JSON-formatted information about the cluster.
 
