@@ -1,13 +1,15 @@
-apiVersion: helm.fluxcd.io/v1
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: azure-arc-sample
-  namespace: default
+  name: kubernetesdeploymentdemo
+  namespace: kubernetesdeploymentdemo
+  annotations:
+    clusterconfig.azure.com/use-managed-source: "true"
 spec:
-  releaseName: default
-  chart:
-    git: https://github.com/LeonidChetverikov/webinarEPAM.git
-    ref: master
-    path: charts/azure-arc-sample
+  interval: 1m
+  releaseName: kubernetesdeploymentdemo
+  chart: 
+    spec:
+      chart: ./charts/azure-arc-sample
   values:
-    serviceName: arc-k8s-demo
+    replicaCount: 2
